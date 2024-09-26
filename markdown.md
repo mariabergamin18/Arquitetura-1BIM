@@ -200,7 +200,7 @@ Garante que uma classe tenha apenas uma instância, fornecendo um ponto global d
 **Quando utilizar:** quando apenas um objeto daquela classe pode existir. 
 
 **Exemplo:** conexões de banco de dados.
-![singleton](https://drive.google.com/file/d/1BluQnXeeAB33dFzOFcZu-YqQLGkJ3WNe/view?usp=drive_link)
+![singleton](./img/singleton.png)
 
 ## 2. Abstract Factory
 Cria famílias de objetos que têm algum tipo de relação entre si, sem especificar suas classes concretas (como se fosse uma interface - na verdade é uma interface!)
@@ -208,7 +208,7 @@ Cria famílias de objetos que têm algum tipo de relação entre si, sem especif
 **Exemplo:** botões e checkboxes
 
 Lembrar do **exemplo dos móveis**. As **famílias** são os móveis (**cadeira, sofá e mesa de centro**) e os **objetos** são os estilos de móveis (**artístico, vitoriano e moderno**).
-![absFactory](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![absFactory](./img/abstract%20factory.png)
 
 **As famílias possuem um template, a partir do qual os objetos são criados e estilizados.**
 
@@ -217,13 +217,13 @@ A fábrica de métodos define um método para criar certos objetos em uma classe
 Também é orientado a interface.
 
 **Exemplo:** Uma empresa de logística possui entregas via terra e via água. Mas, ela precisa criar um método (criar transporte), que se aplica aos dois tipos de transporte oferecidos. (barcos e caminhões).
-![facMethod](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![facMethod](./img/factory%20method.png)
 
 ## 4. Prototype
 Faz clones de uma instância existente, ao invés de criar novos objetos do zero.
 
 **Utilizar quando** criar um objeto é caro (tempo e recursos).
-![prototype](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![prototype](./img/prototype.png)
 
 ## 5. Builder
 Separa o processo de construção de um objeto em passos. Com ele, é possível fazer vários tipos e representações de objetos utilizando o mesmo código de construção.
@@ -239,27 +239,27 @@ Porém, nem todas as casas têm piscina e nem jardim. Por isso, podemos usar ape
 
 Também, algumas casas podem ter as paredes de madeira, e algumas, de pedra. Resolvemos isto usando uma interface em comum para todos os pedreiros, independente do tipo de material que eles utilizam.
 
-![builder](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![builder](./img/builder.png)
 
 # Estruturais
 ## 1. Adapter
 Cria adaptadores de interfaces, criando uma nova interface com as informações esperadas pelo cliente. 
 
 **Utilizado quando** há integração de sistemas legados com novos sistemas ou adaptando uma API a uma interface.
-![adapter](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![adapter](./img/adapter.png)
 ## 2. Bridge
 Digamos que você tem uma classe chamada “Forma”, e as subclasses “Quadrado” e “Círculo”. Mas agora, você quer atribuir cores a eles. Faz então as subclasses “quadrado vermelho” e “quadrado azul”, e “círculo vermelho” e “círculo azul”. Se seguíssemos essa lógica, nossa hierarquia ficaria complexa demais para ser continuada.
 
 O pattern Bridge cria uma ponte entre as classes “forma” e “cor”, atribuindo subclasses que são “formas” e -contêm- uma “cor”.
 
 Agora, qualquer forma pode obter a característica de qualquer cor, sem criar uma subclasse específica para ela.
-![bridge](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![bridge](./img/bridge.png)
 
 ## 3. Composite
 Nessa estrutura, você pode compor objetos como se fossem árvores, onde cada estrutura (galho) é um objeto individual.
 
 Trabalhando com a estrutura de árvore invertida, você cria uma interface comum, que, quando tem um método chamado, os próprios objetos passam a solicitação (ex: o preço total de um item) para baixo, até o final do galho.
-![composite](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![composite](./img/composite.png)
 
 ## 4. Decorator (WHUPFFF!!!)
 Utiliza os princípios de agregação e composição (B não vive sem A ou A controla o ciclo de vida de B) para criar uma hierarquia.
@@ -270,7 +270,7 @@ Porém, entretanto, contudo e todavia, as roupas não fazem parte de você, e ap
 
 
 O exemplo do livro é o dos tipos de notificações (email, Facebook, SMS, etc) que o usuário seleciona que deseja receber.
-![decorator](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![decorator](./img/decorator.png)
 
 ## 5. Facade (Fachada)
 Uma fachada cria uma interface simples para “esconder” um subsistema complexo e repleto de métodos e bibliotecas específicas. 
@@ -278,19 +278,19 @@ Uma fachada cria uma interface simples para “esconder” um subsistema complex
 **Exemplo:** quando falamos com um atendente no telefone para realizar uma compra, o atendente é a fachada entre nós e todos os passos de realizar a compra, como entrar em contato com o depósito, embalagem, entrega, pagamento, fornecedores, impostos, etc.
 
 #### Exemplo do cinema: Facade
-![facade](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![facade](./img/facade.png)
 
 ## 6. Flyweight (peso pena)
 **Utilizado quando** nossa aplicação precisa repetir vários objetos semelhantes sem sobrecarregar a memória RAM. Fazemos isto através de um Flyweight que contém os aspectos extrínsecos do objeto, deixando as características intrínsecas dentro deles mesmos.
 
 **Exemplo:** as balas e mísseis do jogo de guerra que ficam no chão, e variam apenas em velocidade e posição relativa.
-![flyweight](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![flyweight](./img/flyweight.png)
 
 ## 7. Proxy
 O proxy permite criar um substituto para outro objeto, quando criar este objeto consome muitos recursos, por exemplo. É utilizado para controle de acesso e cache.
 
 **Exemplo:** o **cartão de crédito** é um proxy para a **conta bancária**, a qual é um proxy para um **bolo de dinheiro**. É muito melhor para o cliente andar apenas com um pequeno cartão do que um monte de dinheiro, e é melhor para o lojista ter o dinheiro automaticamente depositado na conta do que ter o risco de ser assaltado no caminho até o banco.
-![proxy](https://drive.google.com/drive/u/0/folders/11GBU_u5s-J6mpB6qFpFyxdguuqznXZsc)
+![proxy](./img/proxy.png)
 
 **Outro exemplo:** você tem um sistema de gerenciamento de imagens que precisa exibir várias imagens em alta resolução, mas isto pode consumir muita memória e causar lentidão. 
 Solução: utilizar um proxy que carrega a imagem em alta resolução apenas quando realmente necessário, como no aplicativo **Fotos do iPhone**.
